@@ -13,6 +13,7 @@ public class InventoryUpdateListener {
 
     @EventListener
     public void onOrderCreated(OrderCreatedEvent event) {
+
         logger.info("Actualizando inventario para el producto: " + event.getProduct());
     }
 }

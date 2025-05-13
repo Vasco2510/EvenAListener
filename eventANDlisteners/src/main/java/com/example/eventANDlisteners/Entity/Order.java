@@ -4,8 +4,10 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.Data;
 
 @Entity
+@Data
 public class Order {
 
     @Id
@@ -13,29 +15,13 @@ public class Order {
     private Long id;
     private String orderId;
     private String email;
-    private String product;
+    private String products;
 
     public Order() {}
 
     public Order(String orderId, String email, String product) {
         this.orderId = orderId;
         this.email = email;
-        this.product = product;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getOrderId() {
-        return orderId;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public String getProduct() {
-        return product;
+        this.products = product;
     }
 }
