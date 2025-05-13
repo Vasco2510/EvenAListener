@@ -2,6 +2,8 @@ package com.example.eventANDlisteners.Listener;
 
 
 import com.example.eventANDlisteners.Event.OrderCreatedEvent;
+import org.springframework.context.event.EventListener;
+import org.springframework.stereotype.Component;
 
 import java.util.logging.Logger;
 
