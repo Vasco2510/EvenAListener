@@ -12,6 +12,6 @@ public class AuditLogListener {
 
     @EventListener
     public void handleOrderCreatedEvent(OrderCreatedEvent event) {
-        logger.info("Registrando pedido en logs. ID: " + event.getId());
+        logger.info("Registrando pedido en logs. ID: " + event.getOrderId());
     }
 }
