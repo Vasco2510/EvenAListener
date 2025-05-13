@@ -2,6 +2,7 @@ package com.example.eventANDlisteners.Listener;
 
 
 import com.example.eventANDlisteners.Event.OrderCreatedEvent;
+import org.apache.logging.log4j.LogManager;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
@@ -9,7 +10,7 @@ import java.util.logging.Logger;
 
 @Component
 public class AuditLogListener {
-    private static final Logger logger = LogManager.getLogger(AuditLogListener.class);
+    private static final Logger logger = (Logger) LogManager.getLogger(AuditLogListener.class);
 
     @EventListener
     public void handleOrderCreatedEvent(OrderCreatedEvent event) {
